@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"
+    integrity="sha512-17AHGe9uFHHt+QaRYieK7bTdMMHBMi8PeWG99Mf/xEcfBLDCn0Gze8Xcx1KoSZxDnv+KnCC+os/vuQ7jrF/nkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper navbar-size">
+      <a href="#" class="brand-logo"><img class="user-image-size" src="images/user.png" /></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a target="_blank" href="https://www.linkedin.com/in/navit-choudhary-
+    5133b9104/">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-body">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h1 id="heading">Welcome to SIT 725 Week 3</h1>
+          <p class="flow- text">This is a demo application that tries to use a few components from materialize and
+            through this practical we try to
+            have some fun with Materialize and its components</p>
+        </div>
+        <div class="col s12 center-align">
+          <img class="materialboxed materialboxed-image" src="images/demo.jpg">
+        </div>
+        <div class="col s12 center-align">
+          <a class="waves-effect waves-light btn modal-trigger click-me-button" id="clickMeButton" href="#modal1"><i
+              class="material-icons left">auto_fix_high</i>Click Me</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="row" id="card-section"></div>
+    </div>
+
+
+
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="row modal-content">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 center-align">
+              <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"
+    integrity="sha512-E9vR5BfN3bwSc45BWl95328hvOcBYjMzKAKgdNM59yQXpTC4glztZyVoFJRp5qPc5A95zUZ8D5N7kEwUtJ9f6w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
