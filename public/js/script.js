@@ -24,13 +24,13 @@ const addCards = (items) => {
     let itemToAppend =
       '<div class="col s4 center-align">' +
       '<div class="card small"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' +
-      item.image +
+      item.path +
       '">' +
       '</div><div class="card-content">' +
       '<span class="card-title activator grey-text text-darken-4">' +
       item.title +
       '<i class="material-icons right">more_vert</i></span><p><a href="#">' +
-      item.link +
+      item.desciption +
       "</a></p></div>" +
       '<div class="card-reveal">' +
       '<span class="card-title grey-text text-darken-4">' +
@@ -50,18 +50,29 @@ const clickMe = () => {
 
 const submitForm = () => {
   let formData = {};
-  formData.first_name = $("#first_name").val();
-  formData.last_name = $("#last_name").val();
-  formData.password = $("#password").val();
-  formData.email = $("#email").val();
-  console.log("Form Data Submitted: ", formData);
+  formData.title = $("#title").val();
+  formData.path = $("#path").val();
+  formData.desciption = $("#description").val();
+  formData.subtitle = $("#subtitle").val();
+
+  $.post('/api/cats', formData)
+  alert("Cat post successful")
 };
+
+const getProjects = () => {
+
+  $.get('/api/cats', (response) => {
+    if (response.statusCode == 200) {
+      addCards(response.data);
+    }
+  })
+}
 
 $(document).ready(function () {
   $(".materialboxed").materialbox();
   $("#formSubmit").click(() => {
     submitForm();
   });
-  addCards(cardList);
+  getProjects();
   $(".modal").modal();
 });
